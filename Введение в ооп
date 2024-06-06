@@ -1,0 +1,102 @@
+Задача 1﻿
+class LittleBell:
+    def sound(self):
+        print("ding")
+bell = LittleBell()
+bell.sound()
+
+Задача 2
+class Button:
+    def __init__(self): 
+        self.clicks = 0
+
+    def click(self):
+        self.clicks += 1
+
+    def click_count(self):
+        return self.clicks
+
+    def reset(self):
+        self.clicks = 0
+
+button = Button()
+button.click()
+button.click()
+print(button.click_count())
+button.click()
+print(button.click_count())
+
+*__init__(self): #отвечает за инициализацию экземпляров класса после их создания
+*def click(self): #Метод click увеличивает количество нажатий
+*def click_count(self): #Метод click_count возвращает число нажатий
+*def reset(self): #Метод reset обнуляет количество нажатий.
+
+Задача 3
+class Balance:
+    def __init__(self):
+        self.rightweight = 0
+        self.leftweight = 0
+
+    def add_right(self,weight):
+        self.rightweight += weight
+
+    def add_left(self,weight):
+        self.leftweight += weight
+
+    def result(self):
+        if self.leftweight == self.rightweight:
+            return "="
+        elif self.leftweight < self.rightweight:
+            return "R"
+        else:
+            return "L"
+balance = Balance()
+balance.add_right(10)
+balance.add_left(9)
+balance.add_left(2)
+print(balance.result())
+
+Задача 4
+class OddEvenSeparator:
+    def __init__(self):
+        self.even_numbers = []
+        self.odd_numbers = []
+
+    def add_number(self,number):
+        if number % 2 == 0:
+            self.even_numbers.append(number)
+        else:
+            self.odd_numbers.append(number)
+
+    def even(self):
+        return self.even_numbers
+
+    def odd(self):
+        return self.odd_numbers
+separator = OddEvenSeparator()
+separator.add_number(1)
+separator.add_number(5)
+separator.add_number(6)
+separator.add_number(8)
+separator.add_number(3)
+print(' '.join(map(str, separator.even())))
+print(' '.join(map(str, separator.odd())))
+
+*even and odd #определяет четность и нечетность
+
+Задача 5
+class BigBell:
+    def __init__(self):
+        self.ding = True
+
+    def sound(self):
+        if self.ding:
+            print("ding")
+            self.ding = False
+        else:
+            print("dong")
+            self.ding = True
+bell = BigBell()
+bell.sound()
+bell.sound()
+bell.sound()
