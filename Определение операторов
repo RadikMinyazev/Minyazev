@@ -1,0 +1,128 @@
+Задача 1 
+class FoodInfo:
+    def __init__(self,  proteins = 0 , fats = 0 , carbohydrates = 0):
+        self.proteins = proteins
+        self.fats = fats
+        self.carbohydrates = carbohydrates
+    
+    def get_proteins(self):
+        return self.proteins
+    
+    def get_fats(self):
+        return self.fats
+    
+    def get_carbohydrates(self):
+        return self.carbohydrates
+    
+    def get_Kalories(self):
+        return 4*self.proteins + 9 * self.fats + 4 * self.carbohydrates
+        
+    def __add__(self, other):
+        new_proreins = self.proteins + other.proteins
+        new_fats = self.fats + other.fats
+        new_carbohydrates = self.carbohydrates + other.carbohydrates
+        return f'FoodInfo({new_carbohydrates}, {new_fats}, {new_proreins})'
+        
+        
+    def __str__(self):
+        return f'FoodInfo({self.proteins}, {self.fats}, {self.carbohydrates})'
+    
+food1 = FoodInfo(100, 100, 100)
+food2 = FoodInfo(50, 60, 70)
+food3 = food1 + food2
+print(food1.get_proteins(), food1.get_fats(),food1.get_carbohydrates(),food1.get_Kalories())
+print(food2.get_proteins(), food2.get_fats(),food2.get_carbohydrates(),food2.get_Kalories())
+print(food3.get_proteins(), food3.get_fats(),food3.get_carbohydrates(),food3.get_Kalories())
+
+
+
+
+Задача 2 
+class ReversedList:
+    def __init__(self, lst):
+        self._lst = lst[::-1] 
+
+    def __len__(self):
+        return len(self._lst)
+
+    def __getitem__(self, index):
+        return self._lst[index]
+
+rl = ReversedList([10, 20, 30])
+for i in range(len(rl)):
+    print(rl[i])
+
+
+
+
+Задача 3
+class SquareFunction:
+    def __init__(self, a = 0, b = 0, c = 0 ):
+        self.a = a
+        self.b = b 
+        self.c = c 
+    
+    def __add__(self, x):
+        return a*x**2 + b*x + c
+
+
+sf = SquareFunction(1, 0, 0)
+print(sf(-2))
+
+
+
+Задача 4 
+class Date:
+    def __init__(self, month, day, d1, d2):
+        self.month = month
+        self.day = day
+        self.d1 = 0 
+        self.d2 = 0
+        
+    def __add__(self, other):
+        day_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30 , 31]
+        
+    if  ?? == 0
+    
+    if  ? > 0 
+    
+    if ? < 0 
+    
+    def __str__(self, other):
+        return(d1- d2)
+    
+    jan5 = Date(1, 5)
+    jan1 = Date(1, 1)
+
+    print(jan5 - jan1)
+    print(jan1 - jan5)
+    print(jan1 - jan1)
+    print(jan5 - jan5)
+
+
+
+
+Задача 5
+class Point:
+    def __init__(self, x, y)
+    self.x = x 
+    self.y = y 
+    
+    def __str__(self, other):
+        return self.x == other.x and self.y == other.y
+    
+    def __str__(self, other):
+        return not self == other
+        
+    p1 = Point(1, 2)
+    p2 = Point(5, 6)
+
+    if p1 == p2:
+        print("Equal True")
+    else:
+        print("Equal False")
+
+    if p1 != p2:
+        print("Not equal True")
+    else:
+        print("Not equal False")
