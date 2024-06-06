@@ -1,0 +1,133 @@
+Задача 1
+class BaseObject:
+ 
+    def __init__(self, x: int, y: int, z: int):
+        self.x, self.y, self.z = x, y, z
+        
+    def get_coordinates(self) -> (int, int, int):
+        return self.x, self.y, self.z
+ 
+ 
+class Block(BaseObject):
+    
+    def shatter(self):
+        self.x, self.y, self.z = None, None, None
+ 
+ 
+class Entity(BaseObject):
+ 
+    def move(self, x: int, y: int, z: int):
+        self.x, self.y, self.z = x, y, z
+ 
+ 
+class Thing(BaseObject):
+
+
+
+Задача 2 
+class Acellularia:
+    pass
+
+class Cellularia:
+    pass
+
+class Prokaryota(Cellularia):
+    pass
+
+class Eukaryota(Cellularia):
+    pass
+
+class Unicellularia(Eukaryota):
+    pass
+
+class Fungi(Eukaryota):
+    pass
+
+class Plantae(Eukaryota):
+    pass
+
+class Animalia(Eukaryota):
+    pass
+
+
+
+Задача 3
+class User:
+    def solve(self, n):
+        pass
+
+class Student(User):
+    pass
+
+class Teacher(User):
+    def check_solution(self, user, n):
+        pass
+
+class Admin(User):
+    def edit(self, n):
+        pass
+
+class SuperAdmin(Admin):
+    def grant(self, user):
+        pass
+
+
+
+Задача 4 
+class User:
+    def __init__(self, name):
+        self.name = name
+
+    def send_message(self, user, message):
+        pass
+
+    def post(self, message):
+        pass
+
+    def info(self):
+        return ""
+
+    def describe(self):
+        print(f"{self.name} {self.info()}")
+
+class Person(User):
+    def __init__(self, name, birthday):
+        super().__init__(name)
+        self.birthday = birthday
+
+    def info(self):
+        return f"Дата рождения: {self.birthday}"
+
+    def subscribe(self, user):
+        pass
+
+class Community(User):
+    def __init__(self, name, description):
+        super().__init__(name)
+        self.description = description
+
+    def info(self):
+        return f"Описание: {self.description}"
+
+
+
+
+Задача 5
+class Animal:
+    def breathe(self):
+        pass
+
+    def eat(self):
+        pass
+
+class Fish(Animal):
+    def swim(self):
+        pass
+
+class Bird(Animal):
+    def lay_eggs(self):
+        pass
+
+class FlyingBird(Bird):
+    def fly(self):
+        pass
