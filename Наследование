@@ -131,3 +131,199 @@ class Bird(Animal):
 class FlyingBird(Bird):
     def fly(self):
         pass
+
+
+
+
+Задача6
+class Vehicle:
+    pass
+
+class WaterVehicle(Vehicle):
+    pass
+
+class AirVehicle(Vehicle):
+    pass
+
+class LandVehicle(Vehicle):
+    pass
+
+class SpaceVehicle(Vehicle):
+    pass
+
+class Ship(WaterVehicle):
+    pass
+
+class Boat(WaterVehicle):
+    pass
+
+class Airplane(AirVehicle):
+    pass
+
+class Dirigible(AirVehicle):
+    pass
+
+class Balloon(AirVehicle):
+    pass
+
+class Train(LandVehicle):
+    pass
+
+class Car(LandVehicle):
+    pass
+
+class Bicycle(LandVehicle):
+    pass
+
+class AnimalPoweredVehicle(LandVehicle):
+    pass
+
+class HorseCart(AnimalPoweredVehicle):
+    pass
+
+class Spacecraft(SpaceVehicle):
+    pass
+
+class Rocket(SpaceVehicle):
+    pass
+
+class Satellite(SpaceVehicle):
+    pass
+
+Задача7
+class Shape:
+    pass
+ 
+ 
+class Polygon(Shape):
+    pass
+ 
+ 
+class Triangle(Polygon):
+    pass
+ 
+ 
+class IsoscelesTriangle(Triangle):
+    pass
+ 
+ 
+class EquilateralTriangle(Triangle):
+    pass
+ 
+ 
+class Quadrilateral(Polygon):
+    pass
+ 
+ 
+class Parallelogram(Quadrilateral):
+    pass
+ 
+ 
+class Rectangle(Quadrilateral):
+    pass
+ 
+ 
+class Square(Rectangle):
+    pass
+
+
+
+
+Задача 8
+class Summator:
+    def transform(self, n):
+        return n
+    def sum(self, N):
+        count = 0
+        for i in range(N + 1):
+            count += self.transform(int(i))
+        return count
+class SquareSummator(Summator):
+    def __init__(self):
+        pass
+    def transform(self, n):
+        return n ** 2
+class CubeSummator(Summator):
+    def __init__(self):
+        pass
+    def transform(self, n):
+        return n ** 3
+
+
+
+
+Задача 9
+class Profile:
+    def __init__(self, profession):
+        self.profession = profession
+
+    def info(self):
+        return ""
+
+    def describe(self):
+        print(f"{self.profession} {self.info()}")
+
+class Vacancy(Profile):
+    def __init__(self, profession, salary):
+        super().__init__(profession)
+        self.salary = salary
+
+    def info(self):
+        return f"Предлагаемая зарплата: {self.salary}"
+
+class Resume(Profile):
+    def __init__(self, profession, experience):
+        super().__init__(profession)
+        self.experience = experience
+
+    def info(self):
+        return f"Стаж работы: {self.experience}"
+
+
+
+
+Задача 10
+class Triangle:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def perimeter(self):
+        return self.a + self.b + self.c
+
+class EquilateralTriangle(Triangle):
+    def __init__(self, a):
+        super().__init__(a, a, a)
+
+
+
+
+Задача 12
+class A:
+    def __str__(self):
+        return "A.str"
+
+    def hello(self):
+        print("Hello")
+
+class B:
+    def __str__(self):
+        return "B.str"
+
+    def good_evening(self):
+        print("Good evening")
+
+class C(A, B):
+    pass
+
+class D(A, B):
+    pass
+
+c = C()
+print(c)  
+c.hello() 
+
+d = D()
+print(d)  
+d.good_evening()  
